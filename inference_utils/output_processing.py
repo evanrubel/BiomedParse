@@ -89,6 +89,7 @@ def combine_masks(predicts):
     return masks
 
 def get_target_dist():
-    huggingface_hub.hf_hub_download('microsoft/BiomedParse', filename='target_dist.json', local_dir='./inference_utils')
-    huggingface_hub.hf_hub_download('microsoft/BiomedParse', filename="config.yaml", local_dir="./configs")
-    return json.load(open("inference_utils/target_dist.json"))
+    # huggingface_hub.hf_hub_download('microsoft/BiomedParse', filename='target_dist.json', local_dir='./inference_utils')
+    # huggingface_hub.hf_hub_download('microsoft/BiomedParse', filename="config.yaml", local_dir="./configs")
+    # return json.load(open("inference_utils/target_dist.json"))
+    return json.load(open("segment/models/BiomedParse/inference_utils/target_dist.json"))
