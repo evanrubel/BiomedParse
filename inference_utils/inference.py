@@ -131,7 +131,7 @@ def interactive_infer_image_all(model, image, image_type, p_value_threshold=None
     predicts = non_maxima_suppression(predicts, p_values)
     masks = combine_masks(predicts)
     
-    return {target: mask for target, mask in masks.items()}
+    return {target: mask for target, mask in masks.items()}, p_values
 
 
 def non_maxima_suppression(masks, p_values):
