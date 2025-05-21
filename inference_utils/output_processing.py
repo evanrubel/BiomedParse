@@ -42,6 +42,9 @@ def mask_stats(mask, img):
     
 def combine_masks(predicts):
     # predicts: a dictionary of pixel probability, {TARGET: pred_prob}
+    if not predicts:
+        return {}
+
     pixel_preds = {}
     target_area = {}
     target_probs = {}
